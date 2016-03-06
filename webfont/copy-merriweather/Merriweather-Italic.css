@@ -1,0 +1,12 @@
+/* Webfont: Merriweather-Italic */@font-face {
+    font-family: 'Merriweather';
+    src: url('Merriweather-Italic.eot'); /* IE9 Compat Modes */
+    src: url('Merriweather-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Merriweather-Italic.woff') format('woff'), /* Modern Browsers */
+         url('Merriweather-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Merriweather-Italic.svg#Merriweather-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

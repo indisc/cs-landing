@@ -1,0 +1,12 @@
+/* Webfont: Merriweather-Light */@font-face {
+    font-family: 'MerriweatherLight';
+    src: url('Merriweather-Light.eot'); /* IE9 Compat Modes */
+    src: url('Merriweather-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Merriweather-Light.woff') format('woff'), /* Modern Browsers */
+         url('Merriweather-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Merriweather-Light.svg#Merriweather-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
