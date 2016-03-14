@@ -1,9 +1,10 @@
 @import "../../webfont/font.css";
 
-@pad10: 1em;
-
 @merri: 'Merriweather';
 
+.container{
+    .m0a;
+}
 
 @light: 300;
 @regular: 400;
@@ -50,7 +51,7 @@
 @rem15: 1.5rem;
 
 
-.moa{
+.m0a{
 	margin: 0 auto;
 }
 
@@ -73,6 +74,17 @@
 .mlr0{
 	margin-right: 0;
 	margin-left: 0;
+}
+.mtmb{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.place-top20{
+    padding-top: @20;
+}
+.place-bottom20{
+    padding-bottom: @20;
 }
 
 .flex{
@@ -109,5 +121,6 @@
 
 @grey: #d9d9d9;
 @blue-bg: #3399cc;
-@blue-light: lighten(#3399cc, 80%);
+@blue-light: lighten(@blue-bg, 20%);
 @cream: #caccb0;
+@white: #ffffff;

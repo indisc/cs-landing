@@ -1,0 +1,67 @@
+
+@media(min-width: 768px){
+    body{
+    font-family: @merri;
+    font-size: 62.5%;
+    }
+    .header-bg-img{
+        background: url('../../public/img/comscout-header-img.jpg');
+        background-size: cover;
+        background-position: center center;
+        min-width: 100%;
+        min-height: 500px;
+    }
+    .first-block,.header-bg-img{
+        .blue{
+            background-color: @blue-light;
+        }
+        .color-box{
+            position: relative;
+            top: @20 * 8;
+            max-width: 60%;
+            opacity: 0.9;
+            padding: @20 *2 ;
+            .m0a;
+
+            .first-head{
+                margin-bottom: @10 * 1;
+                .bitalic;
+            }
+            .second-subhead{
+                font-weight: @regular;
+                font-size: @10 * 2.5;
+            }
+        }
+    }//first-block
+
+
+
+    .second-block{
+        background-color: @white;
+    }
+
+    .second-block{
+        position: relative;
+        .grey{
+            background-color: @grey;
+        }
+        .color-box{
+            position: absolute;
+            top:30%;
+            left: 30%;
+            max-width: 80%;
+            opacity: 0.9;
+            padding: @20 *2 ;
+
+            .first-head{
+                margin-bottom: @10 * 1;
+                .bitalic;
+            }
+            .second-subhead{
+                font-weight: @regular;
+                font-size: @10 * 2.5;
+            }
+        }
+    }
+} // media 768
+*

@@ -1,2 +1,2 @@
-function init(){window.addEventListener("scroll",function(e){var l=window.pageYOffset||document.documentElement.scrollTop,n=300,o=document.querySelector("header");l>n?classie.add(o,"smaller"):classie.has(o,"smaller")&&classie.remove(o,"smaller")})}window.onload=init();
+$(window).scroll(function(){$(this).scrollTop()>1?$(".header-color").addClass("sticky"):$(".header-color").removeClass("sticky")});
 //# sourceMappingURL=all.js.map

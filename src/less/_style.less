@@ -1,56 +1,141 @@
 body{
 	font-family: @merri;
-
+    font-size: 62.5%;
 }
 
-*{
-	border-box: box-sizing;
-	padding: 0;
-	margin: 0;
+html{
+    font-size: 16px;
 }
 
-.container-fluid{
-	.plr0;
-	.mlr0;
+
+// first-block color
+.first-head, .second-subhead{
+    color: @white;
+    .letspace;
 }
 
-.header-fixed{
 
-	.header-color{
+//header fix on scroll
+.header-color{
 		background-color: @blue-bg;
 		width: 100%;
-		height: 200px;
-		overflow: hidden;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 999;
-		transition: height 0.3s;
+		height: 108px;
+        z-index: 1;
+		transition: all 0.4s ease;
 		.logo{
 			display: inline-block;
-			height: 150px;
+			height: 45px;
 			float: left;
-			transition:  all 0.3s;
-			position: relative;
-			top: 1em;
+			transition:  all 0.3s ease;
+            margin-top: 10vw;
 			margin-left: 8vw;
-		}
+            z-index: 1;
 	}
 }
 
-.header.smaller{
-	height: 75px;
-	.logo{
-		width: 150px;
-		height: 75px;
-
-	}
+.header-color.sticky{
+        position: fixed;
+        background-color: @blue-bg;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        .logo{
+            display: inline-block;
+            height: 35px;
+            float: left;
+            transition:  all 0.3s;
+            margin-top: 6vw;
+            margin-left: 15vw;
+            z-index: 1;
+    }
 }
 
-.header-bg{
-	background: url('../../public/img/comscout-header-img.jpg');
-	background-size: cover;
-	background-position: center center;
-	min-width: 100%;
-	min-height: 500px;
+.header-bg-img{
+    background: url('../../public/img/comscout-header-img.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-width: 100%;
+    min-height: 250px;
+}
+
+.first-block,.header-bg-img{
+    .blue{
+        background-color: @blue-light;
+    }
+    .color-box{
+        position: relative;
+        top: @20 * 3;
+        opacity: 0.9;
+        padding: @20;
+
+        .first-head{
+            margin-bottom: @10 * 1;
+            .bitalic;
+            font-size: @10 * 1.3;
+        }
+        .second-subhead{
+            font-weight: @regular;
+            font-size: @10 * 1.2;
+        }
+    }
+}//first-block
+
+.block-list{
+    padding: 0 @20;
+    background-color: @white;
+    .color-box{
+
+        opacity: 0.9;
+        padding: @20 *1 ;
+    }
+} //second block
+
+.search-module{
+    background-color: @white;
+    .color-box{
+        opacity: 0.9;
+        padding: @20 *1 ;
+    }
+} //second block
+
+//first color-box
+
+.grey{
+    background-color: @grey;
+}
+
+// second color-box
+.beige{
+    background-color: @cream;
+}
+
+//headline
+.cs-headline{
+        line-height: @15;
+        padding-top: @15;
+        padding-bottom: @rem05;
+        font-weight: @bold;
+        font-size: @15
+}
+
+//li elemente
+.first-txt-element{
+    padding: 0 @20;
+    .head--comscout--list{
+        line-height: @rem15;
+        padding: 0 @10;
+        .second-block-list{
+            font-size: @10 * 1.2;
+            font-weight: @regular;
+            word-wrap: break-word;
+
+
+        }
+    }
+}
+
+.second-block-list:before{
+    content: "->";
+    color: black;
+    font-size: @10;
 }
