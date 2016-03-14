@@ -15,8 +15,8 @@ var bootlint 		= require('gulp-bootlint');
 // static server
 gulp.task('webserver', function(){
 	connect.server({
-		root: '../code/',
-		port: 9008,
+		root: '../cs-landing/',
+		port: 9003,
 		livereload: true
 		});
 });
@@ -108,7 +108,7 @@ gulp.task('watch', function(){
 	gulp.watch('dist/js/*.js', ['js-lib']);
 	gulp.watch('src/js/*.js', ['js-only']);
 	gulp.watch('public/img/*', ['images']);
-});	
+});
 
 gulp.task('default', ['less', 'webserver', 'watch', 'js-lib', 'js-only', 'html', 'css', 'images'/*, 'bootlint'*/])
 
