@@ -1,20 +1,38 @@
-@import "../../webfont/font.css";
+// @import "../../webfont/font.css";
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,300italic,300);
 
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic);
+
+@import url(https://fonts.googleapis.com/css?family=Signika:400,600,700,300);
+
+
+@signi: 'Signika', sans-serif;
 @merri: 'Merriweather';
+@sourcesans: 'Source Sans Pro';
 
 .container{
     .m0a;
 }
 
-@light: 300;
-@regular: 400;
-@bold: 700;
-@black: 900;
+@sigthin: 300;
+@sigmed: 400;
+@sigbold: 600;
+@sigblack: 700;
 
-@litalic: MerriweatherLight;
-@italic: italic;
 
-.litalic(
+@sans-thin: 300;
+@sans-medium: 400;
+@sans-bold: 700;
+
+@M-thin: 300;
+@M-regular: 400;
+@M-bold: 700;
+
+.fo(@fosi){
+	font-size: @fosi;
+}
+
+.titalic(
 	font-weight: 300;
 	font-style: italic;
 )
@@ -26,11 +44,6 @@
 
 .bitalic{
 	font-weight: 700;
-	font-style: italic;
-}
-
-.blitalic{
-	font-weight: 900;
 	font-style: italic;
 }
 
@@ -107,20 +120,51 @@
 @logo: ‘../../public/img/logo_comscout.svg;
 
 
+.pos-absolute{
+	position: absolute;
+}
+
+.mtop05{
+	margin-top: @05;
+}
+
+.matop (@top){
+	margin-top: @top;
+}
+.mabot (@bot){
+	margin-bottom: @bot;
+}
+.patop(@top){
+	padding-top: @top;
+}
+
+.pabot(@bot){
+	padding-bottom: @bot;
+}
+
+
+.form-font{
+	font-size: @10 * 1.3;
+	font-weight: @sans-thin;
+}
+
+
+// umbruch text
+.before::before,
+.after::after {
+    content: "\A";
+    white-space: pre;
+}
+
+
+@icon: "../../public/img/list-icon.svg";
 
 
 
-
-
-
-
-
-
-
-
-
-@grey: #d9d9d9;
+@grey: #fafafa;
 @blue-bg: #3399cc;
 @blue-light: lighten(@blue-bg, 20%);
-@cream: #caccb0;
-@white: #ffffff;
+@cream: #B0BEA9;
+@cream1: #d0d8cc;
+@white: #fff;
+@blue-dark: #02182B;

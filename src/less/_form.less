@@ -1,0 +1,332 @@
+form{
+	font-family: @sourcesans;
+}
+
+.bmform_outer620619 {
+    min-width: 100%;
+}
+
+.bmform_inner620619 {
+    
+}
+
+.bmform_head620619 {
+    background-color: #FFCC66;
+    height: 37px;
+}
+
+.form-body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 12px;
+    padding: 0 @10;
+
+}
+
+
+
+
+.bmform_frmtext620619 {
+    padding: 5px 0px 3px 0px;
+    display: block;
+    float: none;
+    text-align: left;
+    text-decoration: none;
+    width: auto;
+    font-weight: bold;
+}
+
+.bmform_frm620619 {
+    color: #000000;
+    display: block;
+    float: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+	min-width: 100%;
+    padding: 3px;
+}
+
+.bmform_button620619 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.bmform_submit620619 {
+    padding: 3px 12px 3px 12px;
+}
+
+.bmform_footer620619 {}
+
+.footer_bdy620619 {}
+
+.footer_txt620619 {}
+
+#tdLogo620619 img {
+    margin-bottom: 10px;
+    max-width: 230px;
+}
+
+.star-red{
+	color: red;
+}
+
+
+.form-element{
+    background-color: @cream;
+    .patop(@20);
+}
+
+
+
+//hgroup form
+.headline-form{
+    background-color: @blue-bg;
+    padding: @05 @05;
+
+    .form-headline{
+        font: 1.5em/@15 @signi, sans;
+        padding-top: @05;
+        font-weight: @sigbold;
+        color: @white;
+    }
+
+    .intro-txt {
+        font-size: 12px;
+        font-weight: @sigbold;
+        color: @white;
+        line-height: 1.4em;
+        .letspace;
+        hyphens: manual;
+        word-wrap: break-word;
+    }
+}
+
+
+
+//formular
+
+// no border field
+.email,
+.vname,
+.n-name,
+.plz{
+	border: 0;
+    transition: all 0.3s;
+	max-width: 100%;
+	padding-bottom: @10;
+    border-bottom: 1px solid grey;
+}
+.email:focus,
+.vname:focus,
+.n-name:focus,
+.plz:focus{
+    border-bottom: 2px solid @cream;
+}
+
+label{
+    position: absolute;
+	transition: all 150ms ease;
+}
+
+.f-mail{
+    top: 6em;
+    .form-font;
+}
+.f-vname{
+    top: 10em;
+    .form-font;
+}
+
+.f-n_name{
+    top: 13.8em;
+    .form-font;
+}
+
+.f-interest{
+    top: 18.5em;
+    .form-font;
+}
+
+.select-wahl{
+    margin-top: 1em;
+    margin-bottom: @20;
+}
+
+.f-plz{
+    top: 22.8em;
+    .form-font;
+}
+
+input{
+    height: 2.5em;
+    margin-bottom: @15;
+}
+
+select{
+    border-radius: 0;
+    border: 0;
+    background-color: @blue-bg;
+    color: @white;
+    min-width: 100%;
+    padding: @05 0;
+    appearance: none;
+    border-radius: 0;
+    padding-left: @05;
+}
+
+option{
+    background: @blue-bg;
+
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+input[type="text"] {
+    padding: 0;
+    width: 100%;
+    font-family: @signi;
+    font-weight: @sigmed;
+    .letspace;
+    padding-left: @05;
+    font-size: 1.2em;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    color: @blue-bg;
+}
+
+.email{
+    margin-top: 2em;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+.senden{
+    border: 0;
+    background-color: @blue-bg;
+    color: @white;
+}
+
+.RequiredField{
+    padding-top: @05;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight: @sigmed;
+    .letspace;
+}
+
+// forumlar
+.mail-test:before{
+    content:"Bitte eine Emailadresse eingeben";
+    font-size: 1.4em;
+    color:red;
+    border-color: red;
+}
+.mail-test:after{
+    content:"";
+    font-size: 1.3em;
+    border-color: green;
+}
+.mail-success{
+   border-top: 3px solid green;
+}
+.v-name-test{
+
+}
+.n-name-test{
+
+}
+.interest-test{
+}
+
+
+
+@-moz-document url-prefix() {
+    label{
+        position: absolute;
+        transition: all 150ms ease;
+    }
+
+    .f-mail{
+        top: 6em;
+        .form-font;
+    }
+    .f-vname{
+        top: 10em;
+        .form-font;
+    }
+
+    .f-n_name{
+        top: 13.8em;
+        .form-font;
+    }
+
+    .f-interest{
+        top: 18em;
+        .form-font;
+    }
+
+    .select-wahl{
+        margin-top: 1em;
+        margin-bottom: @20;
+    }
+
+    .f-plz{
+        top: 23em;
+        .form-font;
+    }
+}
+
+@media(min-width: 560px){
+    .f-mail{
+        top: 5em;
+        }
+    .f-vname{
+        top: 9em;
+        }
+
+    .f-n_name{
+        top: 12.7em;
+    }
+
+    .f-interest{
+        top: 18.5em;
+        }
+    .f-interest{
+        top: 17.5em;
+    }
+    .f-plz{
+        top: 21.5em;
+    }
+
+    @-moz-document url-prefix() {
+
+        .f-mail{
+            top: 5em;
+        }
+        .f-vname{
+            top: 9em;
+        }
+
+        .f-n_name{
+            top: 12.8em;
+        }
+
+        .f-interest{
+            top: 17.5em;
+        }
+
+        .f-plz{
+            top: 21.5em;
+        }
+    }//moz prefix
+}
+

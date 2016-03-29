@@ -1,5 +1,6 @@
 body{
-	font-family: @merri;
+	// font-family: @merri;
+    font-family: @signi; 
     font-size: 62.5%;
 }
 
@@ -8,134 +9,232 @@ html{
 }
 
 
-// first-block color
-.first-head, .second-subhead{
-    color: @white;
-    .letspace;
+.intro-headline, .intro-subline{
+    color: white;
 }
+
 
 
 //header fix on scroll
 .header-color{
 		background-color: @blue-bg;
 		width: 100%;
-		height: 108px;
+		height: 75px;
         z-index: 1;
 		transition: all 0.4s ease;
 		.logo{
 			display: inline-block;
-			height: 45px;
+			height: 35px;
 			float: left;
 			transition:  all 0.3s ease;
-            margin-top: 10vw;
-			margin-left: 8vw;
+            min-width: 100%;
+            margin: 2em auto;
             z-index: 1;
 	}
 }
 
 .header-color.sticky{
-        position: fixed;
-        background-color: @blue-bg;
-        width: 100%;
-        height: 70px;
+    position: fixed;
+    background-color: @blue-bg;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    .logo{
+        display: inline-block;
+        height: 30px;
+        float: left;
+        transition:  all 0.3s;
+        min-width: 100%;
+        margin: 1.5em auto;
         z-index: 1;
-        .logo{
-            display: inline-block;
-            height: 35px;
-            float: left;
-            transition:  all 0.3s;
-            margin-top: 6vw;
-            margin-left: 15vw;
-            z-index: 1;
     }
 }
 
-.header-bg-img{
-    background: url('../../public/img/comscout-header-img.jpg');
-    background-size: cover;
-    background-position: center center;
+
+.header-img{
     min-width: 100%;
-    min-height: 250px;
+    height: auto;
 }
 
-.first-block,.header-bg-img{
-    .blue{
-        background-color: @blue-light;
+.intro{
+    position: relative;
+    .intro-head-group{
+        position: absolute;
+        min-width: 80%;
+        padding: 0.8em;
+        margin-left: 10%;
+        margin-right: 10%;
+        bottom: 12vw;
     }
-    .color-box{
-        position: relative;
-        top: @20 * 3;
-        opacity: 0.9;
-        padding: @20;
+}
 
-        .first-head{
-            margin-bottom: @10 * 1;
-            .bitalic;
-            font-size: @10 * 1.3;
-        }
-        .second-subhead{
-            font-weight: @regular;
-            font-size: @10 * 1.2;
-        }
+.color-box{
+    opacity: 0.9;
+}
+
+// this is a color block and font custom 
+
+.intro{
+
+    .intro-head-group{
+        color: @white;
+        background-color: @blue-light;
+        padding-left: @20;
+    }
+    .intro-headline{
+        margin-bottom: 3vw;
+        // .bitalic;
+        font-weight: @sigbold;
+        font-size: 3.5vw;
+        .letspace;
+    }
+    .intro-subline{
+        
+        font-weight: 300;
+        font-size: 3vw;
     }
 }//first-block
 
-.block-list{
-    padding: 0 @20;
-    background-color: @white;
-    .color-box{
 
-        opacity: 0.9;
-        padding: @20 *1 ;
-    }
-} //second block
 
-.search-module{
-    background-color: @white;
-    .color-box{
-        opacity: 0.9;
-        padding: @20 *1 ;
-    }
-} //second block
+.headline-group{
+    .pabot(@20);
+    max-width: 90%;
+    .m0a;
+}
 
-//first color-box
 
-.grey{
+
+.second-block{
     background-color: @grey;
+    clear: both;
 }
 
-// second color-box
-.beige{
-    background-color: @cream;
-}
-
-//headline
-.cs-headline{
-        line-height: @15;
+.sec-headline{
+        font: 1.5em/@15 @signi, sans;
         padding-top: @15;
         padding-bottom: @rem05;
-        font-weight: @bold;
-        font-size: @15
+        font-weight: @sigbold;
+        color: @blue-dark;
 }
 
-//li elemente
-.first-txt-element{
-    padding: 0 @20;
-    .head--comscout--list{
-        line-height: @rem15;
-        padding: 0 @10;
-        .second-block-list{
-            font-size: @10 * 1.2;
-            font-weight: @regular;
-            word-wrap: break-word;
 
+.third-block{
+    background-color: @cream;
+    clear: both;
+    .pabot(@10);
+    .color-box{
+        opacity: 0.9;
+        padding: @20 *1 ;
+    }
+} //second block
 
-        }
+//headline
+.third-headline{
+        font: 1.5em/@15 @signi, sans;
+        padding-top: @10;
+        padding-bottom: @05;
+        font-weight: @sigbold;
+        color: @blue-dark;
+        word-wrap: break-word;
+        hyphens: auto;
+
+}
+
+.third-txt{
+    max-width: 100%;
+    .m0a;
+    padding-bottom: @20;
+    padding: 0 @10;
+
+    .third-list{
+        line-height: @15;
+        padding: @10 @10;
+        background-color: @cream1;
+        
     }
 }
 
-.second-block-list:before{
-    content: "->";
-    color: black;
-    font-size: @10;
+
+
+.third-p{
+    font-family: @signi;
+    font-size: 1.5em;
+    font-weight: @sans-thin;
+    // word-wrap: break-word;
+    padding-bottom: 2vw;
+    hyphens: manual;
+    line-height: 1.5em;
+    list-style-position: outside;
 }
+.third-p:nth-child(4){
+    position: relative;
+    top: 0;
+    hyphens: manual;
+    word-wrap: break-word;
+}
+
+
+.icon-comscout{
+    content: "";
+    background-image: url(@icon);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5%;
+    height: 1em;
+    z-index: 1;
+    padding-right: @20;
+}
+
+
+
+
+
+////////////////////////////////////////////////
+//        four-block
+/////////////////////////////////////////////////
+
+.four-block{
+    .pabot(@10);
+}
+
+.four-element{
+    padding: 0 @10;
+}
+
+
+.four-headline{
+        font: 2em/@15 @signi, sans;
+        padding-top: @15;
+        padding-bottom: @05;
+        font-weight: @sigbold;
+        color: @blue-dark;
+}
+
+
+.four-subline{
+    font-family: @signi;
+    font-size: 4.5vw;
+    font-weight: @sigblack;
+    word-wrap: break-word;
+}
+
+
+.four-p{
+    font-family: @signi;
+    font-size: 4vw;
+    font-weight: @sigthin;
+    word-wrap: break-word;
+    padding-bottom: 2vw;
+    hyphens: auto;
+    line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+

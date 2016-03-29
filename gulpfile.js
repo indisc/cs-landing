@@ -1,14 +1,15 @@
-var gulp 			= require('gulp');
-var less 			= require('gulp-less');
+var gulp 					= require('gulp');
+var less 					= require('gulp-less');
 var livereload		= require('gulp-livereload');
-var connect 		= require('gulp-connect');
+var bs 						= require('browser-sync').create();
+var connect 			= require('gulp-connect');
 var autoprefixer 	= require('gulp-autoprefixer');
-var image 			= require('gulp-image');
-var gutil			= require('gulp-util');
-var uglify 			= require('gulp-uglifyjs');
-var concat			= require('gulp-concat');
-var jshint 			= require('gulp-jshint');
-var bootlint 		= require('gulp-bootlint');
+var image 				= require('gulp-image');
+var gutil					= require('gulp-util');
+var uglify 				= require('gulp-uglifyjs');
+var concat				= require('gulp-concat');
+var jshint 				= require('gulp-jshint');
+var bootlint 			= require('gulp-bootlint');
 
 
 
@@ -20,6 +21,7 @@ gulp.task('webserver', function(){
 		livereload: true
 		});
 });
+
 
 gulp.task('html', function(){
 	gulp.src('*.html')
@@ -39,34 +41,10 @@ gulp.task('less', function(){
 			cascade: false
 			}))
 		.pipe(gulp.dest('public/css/'))
-		.pipe(livereload());
+		.pipe(bs.reload({stream: true}));
+		// .pipe(livereload());
 });
 
-// gulp.task('bootlint', function(){
-// 	return gulp.src('./index.html')
-// 		.pipe(bootlint({
-// 			stoponerror: true,
-//             stoponwarning: true,
-//             loglevel: 'debug',
-//             disabledIds: ['W009', 'E007'],
-//             reportFn: function(file, lint, isError, isWarning, errorLocation) {
-//                 var message = (isError) ? "ERROR! - " : "WARN! - ";
-//                 if (errorLocation) {
-//                     message += file.path + ' (line:' + (errorLocation.line + 1) + ', col:' + (errorLocation.column + 1) + ') [' + lint.id + '] ' + lint.message;
-//                 } else {
-//                     message += file.path + ': ' + lint.id + ' ' + lint.message;
-//                 }
-//                 console.log(message);
-//             },
-//             summaryReportFn: function(file, errorCount, warningCount) {
-//                 if (errorCount > 0 || warningCount > 0) {
-//                     console.log("please fix the " + errorCount + " errors and "+ warningCount + " warnings in " + file.path);
-//                 } else {
-//                     console.log("No problems found in "+ file.path);
-//                 }
-//             }
-// 		}));
-// 	});
 
 gulp.task('js-lib', function(){
 	gulp.src('dist/js/*.js')
@@ -100,7 +78,7 @@ gulp.task('images', function(){
 		.pipe(gulp.dest('public/img--min'));
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', ['webserver'], function(){
 	livereload.listen();
 	gulp.watch('src/less/*.less', ['less']);
 	gulp.watch(['*.html'], ['html']);
@@ -110,6 +88,6 @@ gulp.task('watch', function(){
 	gulp.watch('public/img/*', ['images']);
 });
 
-gulp.task('default', ['less', 'webserver', 'watch', 'js-lib', 'js-only', 'html', 'css', 'images'/*, 'bootlint'*/])
+gulp.task('default', ['less', 'webserver', 'watch', 'js-lib', 'js-only', 'html', 'css', 'images'])
 
 
