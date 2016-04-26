@@ -130,6 +130,24 @@ p,
   margin-top: 0;
   margin-bottom: 0;
 }
+.panel-default .panel-heading {
+  background-color: #fff;
+}
+.panel-default .panel-heading .four-subline {
+  color: #02182B;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  font-size: 2em;
+  padding-top: 0;
+}
+.panel-default .panel-body {
+  background-color: #99B6BD;
+}
+.panel-default .panel-body .four-p {
+  padding-bottom: 0;
+  font-size: 1.7em;
+  color: white;
+}
 form {
   font-family: 'Source Sans Pro';
 }
@@ -725,7 +743,7 @@ html {
     max-width: 100%;
   }
   .third-headline {
-    font-size: 1.6em;
+    font-size: 1.4em;
     padding: 0.5em;
   }
   .third-list {
@@ -737,8 +755,8 @@ html {
     padding-bottom: 1em;
   }
   .four-element {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 22%;
+    margin-right: 22%;
   }
 }
 @media (min-width: 1024px) {
@@ -759,11 +777,12 @@ html {
     -ms-hyphens: manual;
     hyphens: manual;
     margin-top: 0.5vw;
+    font-size: 1.7em;
   }
   .form-input {
-    margin-left: 16vw;
-    margin-right: 16vw;
-    max-width: 80%;
+    margin-left: 22.5vw;
+    margin-right: 22.6vw;
+    min-width: 57%;
   }
 }
 @media (min-width: 1150px) {
@@ -775,5 +794,19 @@ html {
   }
   .third-p {
     font-size: 1.6em;
+  }
+}
+@media (min-width: 1440px) {
+  .third-headline {
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+    margin-top: 0.5vw;
+    font-size: 1.9em;
+  }
+  .third-p {
+    font-size: 1.8em;
+    line-height: 1.2em;
   }
 }
